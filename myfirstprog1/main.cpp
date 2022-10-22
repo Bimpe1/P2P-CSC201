@@ -2,6 +2,24 @@
 #include <cmath>
 
 using namespace std;
+//void sayHi(string name,int age);
+
+/*double cube(double num){
+    double result = num* num*num;
+    cout<<"Hello\n";
+    return result;*/
+
+int getMax(int num1,int num2){
+int result;
+if(num1>num2){
+    result = num1;
+}else{
+    result = num2;
+}
+return result;
+}
+
+
 
 int main()
 {
@@ -17,14 +35,17 @@ characterAge = 70;
  cout <<"He was 70 years old" << endl;
  cout <<"He did not like the name George"<< endl;
  cout <<"But he did not like being 70"<< endl;
+
  char grade = 'A';
  string phrase ="Giraffe Academy";
+
  int age = 50;
  double gpa = 2.3;
  bool isMale= false;
   cout << grade<< endl;
     cout << "Hello\n";
     cout << "grade"<< endl;
+
     string phrase = "Giraffe Academy";
     string phrasesub;
     phrasesub = phrase.substr(9,4);
@@ -35,13 +56,15 @@ characterAge = 70;
      cout<< "Enter your name: ";
      getline(cin, name);
      cout<<"Hello "<< name;
+
     //BuILDING A CALCULATOR
     double num1, num2;
     cout<<"Enter first number";
     cin>>num1;
     cout<<"Enter second number";
     cin>>num2;
-    cout<< num1+num2;*/
+    cout<< num1+num2;
+
     //Building a Mad Libs
     string colour,pluralNoun,celebrity;
     cout<<"Enter a colour: ";
@@ -56,5 +79,37 @@ characterAge = 70;
     cout<<"I love " <<celebrity<<endl;
 
 
+    int luckyNums[20]={4,8,15,16,23,42};
+    luckyNums[10]=100;
+    cout<< luckyNums[10];
+
+    //Functions
+    //sayHi("Bimpe",17);
+
+    //Return Keyword
+    //double answer = cube(5.0);
+    //cout<<cube(5.0);
+
+
+//If Statements
+    bool isMale = true;
+    bool isTall = false;
+    if(isMale && isTall){
+        cout<<"You are a tall male";
+    }else if(isMale && !isTall){
+        cout<<"You are a short male";
+    }else if(!isMale && isTall){
+        cout<<"You are tall but not male";
+    }else{
+        cout<<"You are not male and not tall";
+    }*/
+
+
+cout<<getMax(2,2);
+
     return 0;
 }
+/*void sayHi(string name,int age){
+    cout<<"Hello "<<name<< " you are "<<age;*/
+
+
