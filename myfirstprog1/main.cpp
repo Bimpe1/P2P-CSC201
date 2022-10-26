@@ -7,17 +7,50 @@ using namespace std;
 /*double cube(double num){
     double result = num* num*num;
     cout<<"Hello\n";
-    return result;*/
+    return result;
 
-int getMax(int num1,int num2){
+int getMax(int num1,int num2,int num3){
 int result;
-if(num1>num2){
+if(num1>=num2 && num1>=num3){
     result = num1;
-}else{
-    result = num2;
+}else if(num2>=num1 &&num2>=num3){
+    result= num2;
+}
+
+else{
+    result = num3;
 }
 return result;
 }
+string getDayOfWeek(int dayNum){
+    string dayName;
+    switch(dayNum){
+        case 0:
+            dayName="Sunday";
+        break;
+        case 1:
+            dayName="Monday";
+        break;
+        case 2:
+            dayName="Tuesday";
+        break;
+        case 3:
+            dayName="Wednesday";
+        break;
+        case 4:
+            dayName="Thursday";
+        break;
+        case 5:
+            dayName="Friday";
+        break;
+        case 6:
+            dayName="Saturday";
+        break;
+default:
+    dayName="Invalid Day Number";
+   }
+    return dayName;*/
+
 
 
 
@@ -102,13 +135,61 @@ characterAge = 70;
         cout<<"You are tall but not male";
     }else{
         cout<<"You are not male and not tall";
-    }*/
+    }
 
 
-cout<<getMax(2,2);
+//cout<<getMax(2,50,100);
 
+//Building a better Calculator
+int num1,num2;
+char op;
+
+cout<<"Enter first number: ";
+cin>> num1;
+cout<<"Enter operator: ";
+cin>> op;
+cout<<"Enter second number: ";
+cin>> num2;
+int result;
+if(op == '+'){
+        result= num1+num2;
+}else if(op == '-'){
+        result= num1-num2;
+}else if(op == '/'){
+        result= num1/num2;
+}else if(op == '*'){
+        result= num1*num2;
+}else{
+    cout<<"Invalid Operator";
+}
+cout<<result;
+
+
+//Switch Statements
+//cout<<getDayOfWeek(4);
+
+
+
+//While Loops
+int index =1;
+while (index <= 5){
+    cout<<index <<endl;
+    index++;
+}
+int index =6;
+while (index <= 5){
+    cout<< index <<endl;
+}*/
+
+int index = 4;
+do{
+    index++;
+}while(index <= 5);
+    cout<<index;
     return 0;
 }
+
+
 /*void sayHi(string name,int age){
     cout<<"Hello "<<name<< " you are "<<age;*/
 
