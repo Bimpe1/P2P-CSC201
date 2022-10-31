@@ -49,10 +49,87 @@ string getDayOfWeek(int dayNum){
 default:
     dayName="Invalid Day Number";
    }
-    return dayName;*/
+    return dayName;
+
+    int power(int baseNum ,int powNum){
+    int result=1;
+    for(int i=0;i<powNum;i++){
+        result = result*baseNum;
+    }
 
 
 
+    return result;
+}
+
+
+class movie{
+private:
+    string rating;
+public:
+    string title;
+    string director;
+
+
+    movie(string aTitle,string aDirector, string aRating){
+        title=aTitle;
+        director=aDirector;
+        setRating(aRating);
+
+    }
+    void setRating(string aRating){
+        if(aRating=="G"||aRating=="PG"||aRating=="PG-13"||aRating=="R"||aRating=="NR"){
+            rating=aRating;
+        }else{
+            rating ="NR";
+        }
+
+    }
+    string getRating(){
+    return rating;
+    }
+};*/
+/*class Student{
+public:
+    string name;
+    string major;
+    double gpa;
+
+    Student(string aName,string aMajor, double aGpa){
+        name=aName;
+        major=aMajor;
+        gpa=aGpa;
+    }
+    bool hasHonours(){
+        if (gpa>=3.5){
+            return true;
+        }
+        return false;
+    };
+};*/
+
+
+class Chef{
+public:
+    void makeChicken(){
+    cout<<"The chef makes chicken"<<endl;
+    }
+    void makeSalad(){
+    cout<<"The chef makes salad"<<endl;
+    }
+    void makeSpecialDish(){
+    cout<<"The chef makes bbq ribs"<<endl;
+    }
+};
+class ItalianChef:public Chef{
+    public:
+        void makePasta(){
+            cout<<"The chef makes pasta"<<endl;
+    }
+     void makeSpecialDish(){
+    cout<<"The chef makes chicken parm"<<endl;
+    }
+};
 
 int main()
 {
@@ -179,7 +256,7 @@ while (index <= 5){
 int index =6;
 while (index <= 5){
     cout<< index <<endl;
-}*/
+}*
 
 int index = 4;
 do{
@@ -187,7 +264,129 @@ do{
 }while(index <= 5);
     cout<<index;
     return 0;
+
+
+    //Building a guessing game
+
+    int secretNum =7;
+    int guess;
+    int guessCount=0;
+    int guessLimit = 3;
+    bool outOfGuesses= false;
+
+    while(secretNum != guess && !outOfGuesses){
+    if(guessCount< guessLimit){
+        cout<<"Enter guess: ";
+        cin>>guess;
+        guessCount++;
+}else {
+        outOfGuesses =true;
+    }
+    }
+if(outOfGuesses){
+        cout<<"You lose";
+} else{
+         cout<< "You win";
+    }
+
+
+    //For loop
+    int index =1;
+    while(index<=5){
+        cout<<index<<endl;
+        index++;
+    }
+    for(int i=1;i<=5;i++){
+      cout<<i<<endl;
+    }
+
+int nums[]={1,2,5,7,3};
+for(int i=0;i<5;i++){
+      cout<<nums[i]<<endl;
 }
+
+
+//Exponential Function
+
+cout<< power(4,3);
+
+
+//2D arrays and nested for loops
+int numberGrid[3][2]={
+                     {1,2},
+                     {3,4},
+                     {5,6}
+                     };
+//cout<<numberGrid[2][0];
+for(int i=0;i<3;i++){
+    for (int j=0;j<2;j++){
+        cout<<numberGrid[i][j];
+    }
+    cout<<endl;
+}
+
+
+//Comments
+
+
+//Pointers
+int age=19;
+int *pAge=&age;
+double gpa=2.7;
+double *pGpa=&gpa;
+string name="Mike";
+string *pName=&name;
+/*cout<<"Age: "<<&age<<endl;
+cout<<"gpa: "<<&gpa<<endl;
+cout<<"Name: "<<&name<<endl;
+
+//cout<<pAge;
+//cout<<*pAge;
+
+
+//Classes and Objects
+Book book1;
+book1.title="Harry Potter";
+book1.author="JK Rowling";
+book1.pages=500;
+cout<<book1.title<<endl;
+
+Book book2;
+book2.title="Lord of the Rings";
+book2.author="Tolkein";
+book2.pages=700;
+
+cout<<book2.author;
+
+
+
+//Constructor Functions
+Book book1("Harry Potter","JK Rowling",500);
+Book book2("Lord of the Rings","Tolkein",700);
+cout<<book1.title;
+
+//Object Functions
+Student student1("Jim","Business",2.4);
+Student student2("Pam","Art",3.6);
+cout<<student2.hasHonours();
+
+
+//Getters and Setters
+
+    movie avengers("The Avengers","Joss","PG-13");
+    avengers.setRating("Dog");
+        cout<<avengers.getRating();*/
+
+
+//Inheritance
+Chef chef;
+chef.makeSpecialDish();
+
+ItalianChef italianChef;
+italianChef.makeSpecialDish();
+return 0;
+}
+
 
 
 /*void sayHi(string name,int age){
